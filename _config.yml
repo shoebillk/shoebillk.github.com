@@ -16,7 +16,7 @@
 title: 내가 좋아하는 툴들
 email: blue021@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  내가 즐겨 사용하는 좋아하는 툴들에 대한 가이드와 단상들.
+  즐겨 사용하고 좋아하는 툴들에 대한 가이드와 단상들.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://shoebillk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: qudgnsl
