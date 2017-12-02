@@ -6,17 +6,17 @@ category: ""
 tags: [ruby]
 ---
 
-ruby 파일에 파라미터를 줘서 실행하는 경우가 있습니다.
+Windows에서 Ruby 파일에 파라미터를 넘겨서 아래와 같이 실행할 때,
 
     ruby.exe test.rb parameter
 
-그런데 Windows OS에서 위와 같이 실행 하는 경우에는 test.rb 파일에서 파라미터를 잘 받아 오는데 아래와 같이 rb 파일만 실행할 경우 파라미터를 받아 오지 못하는 경우가 있습니다.
+위와 같이 ruby.exe 와 함께 실행 할때는 파라미터를 잘 받아 오는데 아래와 같이 rb 파일만 실행할 때는 파라미터를 받아 오지 못하는 경우가 있습니다.
 
     test.rb parameter
 
-.rb 파일과 ruby.exe와 연결되는 설정에 파라미터를 넘기는 부분이 빠져 있으면 위와 같은 문제가 발생합니다.
+.rb 파일과 ruby.exe와 연결되는 설정에 파라미터를 넘기는 부분이 빠져 있어 발생하는 문제입니다. 
 
-인터넷을 찾아 보면 assoc 와 ftype을 이용해서 설정을 점검하는 방법이 있습니다.
+검색을 해보면 assoc 와 ftype을 이용해서 설정을 점검하는 방법이 있습니다.
 
 [Ruby’s ARGV is empty when run on windows](http://samuelanthony12.wordpress.com/2013/09/19/rubys-argv-is-empty-when-run-on-windows/)
 

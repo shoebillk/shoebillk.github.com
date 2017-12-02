@@ -6,7 +6,7 @@ tags : [vimtip]
 title : Vim을 이용해 목록 정렬하기
 ---
 
-아래와 같은 목록을 정렬하고 싶을 때가 있습니다. 
+Vim을 이용하면 아래와 같은 목록을 쉽게 정렬할 수 있습니다.
 
 	banana
 	apple
@@ -20,7 +20,7 @@ title : Vim을 이용해 목록 정렬하기
 	apple
 	pineapple
 
-Vim에서 아래와 같은 명령을 이용할 수 있습니다.
+:sor 명령으로 정렬합니다.
 
 	:sort
   
