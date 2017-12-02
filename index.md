@@ -1,14 +1,6 @@
 ---
-layout: page
-title: shoebillk blog
-tagline:
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+layout: home
 ---
-{% include JB/setup %}
-
-<ul >
-    {% for post in site.posts limit: 4 %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-        {{ post.content | strip_html | truncatewords:75}}<br>
-            <a href="{{ post.url }}">Read more...</a><br><br>
-    {% endfor %}
-</ul>

@@ -5,8 +5,6 @@ description: ""
 category: ""
 tags: [jekyll tip, windows]
 ---
-{% include JB/setup %}
-
 윈도우 시스템에서 jekyll을 사용할 때 한글이 포함된 포스팅을 시작하면 
 다음과 같은 메시지를 보게 됩니다.
 

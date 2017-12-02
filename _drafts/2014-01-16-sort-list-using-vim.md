@@ -5,6 +5,7 @@ tagline: ""
 tags : [vimtip]
 title : Vim을 이용해 목록 정렬하기
 ---
+{% include JB/setup %}
 
 아래와 같은 목록을 정렬하고 싶을 때가 있습니다. 
 

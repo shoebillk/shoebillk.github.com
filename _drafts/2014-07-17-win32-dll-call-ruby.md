@@ -5,8 +5,11 @@ description: ""
 category: ""
 tags: [Ruby Win32]
 ---
+{% include JB/setup %}
 
 {% highlight ruby %}
+require 'fiddle'
+require 'fiddle/import'
 require 'fiddle/types'
 
 module Win32Test

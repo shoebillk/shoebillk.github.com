@@ -5,7 +5,6 @@ description: ""
 category: ""
 tags: [ruby]
 ---
-{% include JB/setup %}
 
 ruby 파일에 파라미터를 줘서 실행하는 경우가 있습니다.
 

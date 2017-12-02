@@ -5,6 +5,8 @@ tagline: ""
 tags : [ruby]
 title : Ruby Fiddle char array 설정 방법
 ---
+{% include JB/setup %}
+
 fiddle에서 제공하는 struct를 사용할 때 char buffer를 설정하려고 하면 too few arguments 에러를 만날 수 있다.
 
     C:/Ruby200-x64/lib/ruby/2.0.0/fiddle/pack.rb:83:in `pack': too few arguments (ArgumentError)

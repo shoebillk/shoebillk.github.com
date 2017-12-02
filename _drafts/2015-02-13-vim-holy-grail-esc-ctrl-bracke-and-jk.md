@@ -5,6 +5,8 @@ description: "Vim 에서 Esc 의 위치에 대해"
 category: "vim"
 tags: [vim]
 ---
+{% include JB/setup %}
+
 Vim에 익숙해질 무렵부터 가져온 궁금증이 있다.
 
 > 왜 타이핑이 어려운 Esc키로 모드 전환을 했을까
