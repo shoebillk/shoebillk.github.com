@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>좋아서 사용하는 툴들</title>
+    <link>http://shoebillk.github.io/</link>
+    <description>Recent content on 좋아서 사용하는 툴들</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Feb 2015 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="http://shoebillk.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>Vi의 Esc 기원</title>
+      <link>http://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
+      <description>Vim을 사용하다 보면 가끔 왜 타이핑이 어려운 Esc키로 모드 전환을 했을까 궁금해 질때가 있습니다.
+Vim에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키에 속합니다. 방향키 대신 hjkl 키로 방향키를 대신할 만큼 단축키 선정에서 효율성을 중시하는 툴이 자주 쓰는 전환 키를 불편한 Esc 로 선정했다는 것은 납득이 되지 않았습니다.
+The Vim Holy Grail를 읽고 조금 이해하게 되었습니다. 요약을 하면.
+ Vi가 만들어질 당시에 쓰였던 키보드는 ADM3A 이란 터미널에 딸려 있는 키보드였다.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>lldb fr v 로 hexa 값 출력하기</title>
+      <link>http://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</link>
+      <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</guid>
+      <description>lldb 의 fr v 명령어는 해당 프레임에 변수를 출력하는 명령어입니다. 이 명령어의 출력은 기본이 10 진수로 표현되는데 16진수나 2진수로 출력하고 싶다면 아래와 같은 옵션으로 형식(hex, bin)을 정해 줍니다.
+(lldb) fr v flag (int) flag = 546 (lldb) fr v flag -f hex (int) flag = 0x00000222 (lldb) fr v flag -f bin (int) flag = 0b00000000000000000000001000100010</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>MongoMapper 에서 timestamp 변경 없이 attribute 갱신하기</title>
+      <link>http://shoebillk.github.io/post/2014-12-01-updata_attr_witout_timestamp_modification_using_mongomapper/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-12-01-updata_attr_witout_timestamp_modification_using_mongomapper/</guid>
+      <description>MongoMapper를 이용해 일괄 작업으로 필드를 업데이트 하는 작업을 할 일이 있었는데 save할 때마다 timestamp(updated_at)이 갱신이 되지 않는 방법을 찾고 있었습니다.
+파라미터를 조정해서는 방법이 없었고 MongoMapper의 Timestamps 의 update_timestamps 메소드를 재정의하는 방법을 선택 했습니다. 코드는 아래와 같습니다.
+module MongoMapper module Plugins module Timestamps def update_timestamps # Don&amp;#39;t update timestamps( updated_at ) end end end end </description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Ruby에서 Win32 DLL API 호출하기</title>
+      <link>http://shoebillk.github.io/post/2014-07-17-win32-dll-call-ruby/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-07-17-win32-dll-call-ruby/</guid>
+      <description>require &amp;#39;fiddle/types&amp;#39; module Win32Test extend Fiddle::Importer dlload &amp;#39;user32.dll&amp;#39; include Fiddle::Win32Types extern &amp;#34;DWORD MessageBoxA(HWND, LPCSTR, LPCSTR, DWORD)&amp;#34; def self.msgbox MessageBoxA(0, &amp;#34;OK?&amp;#34;, &amp;#34;Please Confirm&amp;#34;, 0x40) end end Win32Test.msgbox 좀더 복잡한 구조체를 사용하여 호출해야 한다면 process_tree.rb를 확인해야 합니다.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>rb 파일만 실행 시 파라미터가 넘어가지 않을 때</title>
+      <link>http://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</guid>
+      <description>Windows에서 Ruby 파일에 파라미터를 넘겨서 아래와 같이 실행할 때,
+ruby.exe test.rb parameter  위와 같이 ruby.exe 와 함께 실행 할때는 파라미터를 잘 받아 오는데 아래와 같이 rb 파일만 실행할 때는 파라미터를 받아 오지 못하는 경우가 있습니다.
+test.rb parameter  .rb 파일과 ruby.exe와 연결되는 설정에 파라미터를 넘기는 부분이 빠져 있어 발생하는 문제입니다.
+검색을 해보면 assoc 와 ftype을 이용해서 설정을 점검하는 방법이 있습니다.
+Ruby’s ARGV is empty when run on windows
+그런데 이렇게 설정을 했는데도 여전히 문제가 해결되지 않았다면 레지스트리에 설정을 확인해야 합니다.</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Vim을 이용해 목록 정렬하기</title>
+      <link>http://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</link>
+      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</guid>
+      <description>Vim을 이용하면 아래와 같은 목록을 쉽게 정렬할 수 있습니다.
+banana apple pineapple banana apple pineapple raspberry pineapple banana apple pineapple  :sor 명령으로 정렬합니다.
+:sort apple apple apple banana banana banana pineapple pineapple pineapple pineapple raspberry  역순 정렬은 :sort! 를 사용합니다. Visual block을 선택해서 정렬도 가능합니다.
+:&#39;&amp;lt;,&#39;&amp;gt;sort  중복항목을 제거하고 정렬하려면 아래와 같이 u 옵션을 추가합니다.
+:sort u apple banana pineapple raspberry  좀더 많은 옵션은 도움말을 참고하세요.
+:help sort  </description>
+    </item>
+    
+    
+    
+    <item>
+      <title>jekyll serve 시 invalid byte sequence 해결방법</title>
+      <link>http://shoebillk.github.io/post/2014-01-02-jekyll-config-encoding/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-01-02-jekyll-config-encoding/</guid>
+      <description>윈도우 시스템에서 jekyll을 사용할 때 한글이 포함된 포스팅을 시작하면 다음과 같은 메시지를 보게 됩니다.
+Generating... Error reading file D:/jekyll_test/_posts/2014-01-02-test.md: invalid byte sequence in CP949 Liquid Exception: invalid byte sequence in CP949 in _posts/2014-01-02-test.md/#excerpt Ubuntu 에서는 이런 에러 메시지를 볼 수 없습니다. 윈도우에서 동작하는 jekyll 이 utf-8 이 아닌 cp949로 동작 하기 때문입니다. _config.yml 파일에 아래와 같이 encoding을 설정해서 해결 했습니다.
+encoding: &amp;quot;utf-8&amp;quot;  </description>
+    </item>
+    
+    
+  </channel>
+</rss>

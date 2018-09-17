@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 좋아서 사용하는 툴들</title>
+    <link>http://shoebillk.github.io/tags/</link>
+    <description>Recent content in Tags on 좋아서 사용하는 툴들</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 02 Jan 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shoebillk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jekyll Tip</title>
+      <link>http://shoebillk.github.io/tags/jekyll-tip/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/jekyll-tip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lldb</title>
+      <link>http://shoebillk.github.io/tags/lldb/</link>
+      <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/lldb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mongomapper</title>
+      <link>http://shoebillk.github.io/tags/mongomapper/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/mongomapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://shoebillk.github.io/tags/ruby/</link>
+      <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby Win32</title>
+      <link>http://shoebillk.github.io/tags/ruby-win32/</link>
+      <pubDate>Thu, 17 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/ruby-win32/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>http://shoebillk.github.io/tags/vim/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vimtip</title>
+      <link>http://shoebillk.github.io/tags/vimtip/</link>
+      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/vimtip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://shoebillk.github.io/tags/windows/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

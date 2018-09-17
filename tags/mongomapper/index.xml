@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongomapper on 좋아서 사용하는 툴들</title>
+    <link>http://shoebillk.github.io/tags/mongomapper/</link>
+    <description>Recent content in Mongomapper on 좋아서 사용하는 툴들</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shoebillk.github.io/tags/mongomapper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MongoMapper 에서 timestamp 변경 없이 attribute 갱신하기</title>
+      <link>http://shoebillk.github.io/post/2014-12-01-updata_attr_witout_timestamp_modification_using_mongomapper/</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-12-01-updata_attr_witout_timestamp_modification_using_mongomapper/</guid>
+      <description>MongoMapper를 이용해 일괄 작업으로 필드를 업데이트 하는 작업을 할 일이 있었는데 save할 때마다 timestamp(updated_at)이 갱신이 되지 않는 방법을 찾고 있었습니다.
+파라미터를 조정해서는 방법이 없었고 MongoMapper의 Timestamps 의 update_timestamps 메소드를 재정의하는 방법을 선택 했습니다. 코드는 아래와 같습니다.
+module MongoMapper module Plugins module Timestamps def update_timestamps # Don&amp;#39;t update timestamps( updated_at ) end end end end </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on 좋아서 사용하는 툴들</title>
+    <link>http://shoebillk.github.io/categories/vim/</link>
+    <description>Recent content in Vim on 좋아서 사용하는 툴들</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Feb 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://shoebillk.github.io/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vi의 Esc 기원</title>
+      <link>http://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
+      <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
+      <description>Vim을 사용하다 보면 가끔 왜 타이핑이 어려운 Esc키로 모드 전환을 했을까 궁금해 질때가 있습니다.
+Vim에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키에 속합니다. 방향키 대신 hjkl 키로 방향키를 대신할 만큼 단축키 선정에서 효율성을 중시하는 툴이 자주 쓰는 전환 키를 불편한 Esc 로 선정했다는 것은 납득이 되지 않았습니다.
+The Vim Holy Grail를 읽고 조금 이해하게 되었습니다. 요약을 하면.
+ Vi가 만들어질 당시에 쓰였던 키보드는 ADM3A 이란 터미널에 딸려 있는 키보드였다.</description>
+    </item>
+    
+    <item>
+      <title>Vim을 이용해 목록 정렬하기</title>
+      <link>http://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</link>
+      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</guid>
+      <description>Vim을 이용하면 아래와 같은 목록을 쉽게 정렬할 수 있습니다.
+banana apple pineapple banana apple pineapple raspberry pineapple banana apple pineapple  :sor 명령으로 정렬합니다.
+:sort apple apple apple banana banana banana pineapple pineapple pineapple pineapple raspberry  역순 정렬은 :sort! 를 사용합니다. Visual block을 선택해서 정렬도 가능합니다.
+:&#39;&amp;lt;,&#39;&amp;gt;sort  중복항목을 제거하고 정렬하려면 아래와 같이 u 옵션을 추가합니다.
+:sort u apple banana pineapple raspberry  좀더 많은 옵션은 도움말을 참고하세요.
+:help sort  </description>
+    </item>
+    
+  </channel>
+</rss>
