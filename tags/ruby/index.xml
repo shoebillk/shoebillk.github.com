@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruby on 좋아서 사용하는 툴들</title>
-    <link>http://shoebillk.github.io/tags/ruby/</link>
+    <link>https://shoebillk.github.io/tags/ruby/</link>
     <description>Recent content in Ruby on 좋아서 사용하는 툴들</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Mar 2014 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://shoebillk.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shoebillk.github.io/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>rb 파일만 실행 시 파라미터가 넘어가지 않을 때</title>
-      <link>http://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</link>
+      <link>https://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</link>
       <pubDate>Wed, 12 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</guid>
+      <guid>https://shoebillk.github.io/post/2014-03-12-missing-params-on-excuting-rb/</guid>
       <description>Windows에서 Ruby 파일에 파라미터를 넘겨서 아래와 같이 실행할 때,
 ruby.exe test.rb parameter  위와 같이 ruby.exe 와 함께 실행 할때는 파라미터를 잘 받아 오는데 아래와 같이 rb 파일만 실행할 때는 파라미터를 받아 오지 못하는 경우가 있습니다.
 test.rb parameter  .rb 파일과 ruby.exe와 연결되는 설정에 파라미터를 넘기는 부분이 빠져 있어 발생하는 문제입니다.

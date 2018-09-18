@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lldb on 좋아서 사용하는 툴들</title>
-    <link>http://shoebillk.github.io/tags/lldb/</link>
+    <link>https://shoebillk.github.io/tags/lldb/</link>
     <description>Recent content in Lldb on 좋아서 사용하는 툴들</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 08 Jan 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://shoebillk.github.io/tags/lldb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://shoebillk.github.io/tags/lldb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>lldb fr v 로 hexa 값 출력하기</title>
-      <link>http://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</link>
+      <link>https://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</link>
       <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</guid>
+      <guid>https://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</guid>
       <description>lldb 의 fr v 명령어는 해당 프레임에 변수를 출력하는 명령어입니다. 이 명령어의 출력은 기본이 10 진수로 표현되는데 16진수나 2진수로 출력하고 싶다면 아래와 같은 옵션으로 형식(hex, bin)을 정해 줍니다.
 (lldb) fr v flag (int) flag = 546 (lldb) fr v flag -f hex (int) flag = 0x00000222 (lldb) fr v flag -f bin (int) flag = 0b00000000000000000000001000100010 </description>
     </item>
