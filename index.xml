@@ -27,18 +27,6 @@ The Vim Holy Grail를 읽고 조금 이해하게 되었습니다. 요약을 하�
     
     
     <item>
-      <title>lldb fr v 로 hexa 값 출력하기</title>
-      <link>https://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</link>
-      <pubDate>Thu, 08 Jan 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://shoebillk.github.io/post/2015-01-08-lldb-command-fr-v-format-hexa/</guid>
-      <description>lldb 의 fr v 명령어는 해당 프레임에 변수를 출력하는 명령어입니다. 이 명령어의 출력은 기본이 10 진수로 표현되는데 16진수나 2진수로 출력하고 싶다면 아래와 같은 옵션으로 형식(hex, bin)을 정해 줍니다.
-(lldb) fr v flag (int) flag = 546 (lldb) fr v flag -f hex (int) flag = 0x00000222 (lldb) fr v flag -f bin (int) flag = 0b00000000000000000000001000100010 </description>
-    </item>
-    
-    
-    
-    <item>
       <title>MongoMapper 에서 timestamp 변경 없이 attribute 갱신하기</title>
       <link>https://shoebillk.github.io/post/2014-12-01-updata_attr_witout_timestamp_modification_using_mongomapper/</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
