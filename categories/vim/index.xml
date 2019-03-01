@@ -23,19 +23,5 @@ The Vim Holy Grail를 읽고 조금 이해하게 되었습니다. 요약을 하�
  Vi가 만들어질 당시에 쓰였던 키보드는 ADM3A 이란 터미널에 딸려 있는 키보드였다.</description>
     </item>
     
-    <item>
-      <title>Vim을 이용해 목록 정렬하기</title>
-      <link>https://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</link>
-      <pubDate>Thu, 16 Jan 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://shoebillk.github.io/post/2014-01-16-sort-list-using-vim/</guid>
-      <description>Vim을 이용하면 아래와 같은 목록을 쉽게 정렬할 수 있습니다.
-banana apple pineapple banana apple pineapple raspberry pineapple banana apple pineapple  :sor 명령으로 정렬합니다.
-:sort apple apple apple banana banana banana pineapple pineapple pineapple pineapple raspberry  역순 정렬은 :sort! 를 사용합니다. Visual block을 선택해서 정렬도 가능합니다.
-:&#39;&amp;lt;,&#39;&amp;gt;sort  중복항목을 제거하고 정렬하려면 아래와 같이 u 옵션을 추가합니다.
-:sort u apple banana pineapple raspberry  좀더 많은 옵션은 도움말을 참고하세요.
-:help sort  </description>
-    </item>
-    
   </channel>
 </rss>
