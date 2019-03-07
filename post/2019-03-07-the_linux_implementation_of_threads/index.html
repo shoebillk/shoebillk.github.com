@@ -20,10 +20,10 @@
   <title>
        
        
-           리눅스의 스레드 구현 살펴보기 | Life &amp; Projects
+           리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다 | Life &amp; Projects
        
   </title>
-  <meta name="title" content="리눅스의 스레드 구현 살펴보기 | Life &amp; Projects">
+  <meta name="title" content="리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다 | Life &amp; Projects">
     
   
   <link rel="stylesheet" href="/font/iconfont.css">
@@ -31,8 +31,8 @@
 
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="리눅스의 스레드 구현 살펴보기"/>
-<meta name="twitter:description" content="이 포스에서는 &ldquo;리눅스는 모든 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.
+<meta name="twitter:title" content="리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다"/>
+<meta name="twitter:description" content="&ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.
 책 &lt;리눅스 커널 심층 분석&gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.
  The Linux Implementation of Threads &hellip; Linux has a unique implementation of threads. To the Linux kernel, there is no concept of a thread. Linux implements all threads as standard processes. The Linux kernel does not provide any special scheduling semantics or data structures to represent threads."/>
 
@@ -40,7 +40,7 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "리눅스의 스레드 구현 살펴보기",
+  "headline": "리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/"
@@ -53,7 +53,7 @@
   },
   "genre": "post",
   "keywords": "linux_kernel, linux",
-  "wordcount": 641,
+  "wordcount": 638,
   "url": "https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/",
   "datePublished": "2019-03-07T00:00:00+00:00",
   "dateModified": "2019-03-07T00:00:00+00:00",
@@ -126,7 +126,7 @@
       		
 <article class="post-warp">
     <header class="post-header">
-        <h1 class="post-title">리눅스의 스레드 구현 살펴보기</h1>
+        <h1 class="post-title">리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</h1>
         <div class="post-meta">
               <a href="https://shoebillk.github.io/" rel="author">Byounghoon Kim</a>  ♥ 
                 <span class="post-time">
@@ -138,7 +138,7 @@
                         <a href="https://shoebillk.github.io/categories/linux/"> linux </a>
                         
                 </span>
-                &nbsp;&nbsp;4 min
+                &nbsp;&nbsp;3 min
         </div>
     </header>
     <div class="post-content">
@@ -157,7 +157,7 @@
           
           
 
-          <p>이 포스에서는 &ldquo;리눅스는 모든 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.</p>
+          <p>&ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.</p>
 
 <p>책 &lt;리눅스 커널 심층 분석&gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.</p>
 
@@ -282,7 +282,7 @@ LWP는 light wight process의 약자로 리눅스 커널이 스레드를 프로�
            
             <p class="copyright-item">
                     <span>:</span>
-                   <span>641</span>
+                   <span>638</span>
             </p>
 
              

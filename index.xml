@@ -10,12 +10,12 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>리눅스의 스레드 구현 살펴보기</title>
+      <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
       <link>https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/</guid>
-      <description>&lt;p&gt;이 포스에서는 &amp;ldquo;리눅스는 모든 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.&lt;/p&gt;
+      <description>&lt;p&gt;&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.&lt;/p&gt;
 
 &lt;p&gt;책 &amp;lt;리눅스 커널 심층 분석&amp;gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.&lt;/p&gt;
 
