@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Life &amp; Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://shoebillk.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux</title>
+      <link>https://shoebillk.github.io/tags/linux/</link>
+      <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shoebillk.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux_kernel</title>
+      <link>https://shoebillk.github.io/tags/linux_kernel/</link>
+      <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://shoebillk.github.io/tags/linux_kernel/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Vim</title>
