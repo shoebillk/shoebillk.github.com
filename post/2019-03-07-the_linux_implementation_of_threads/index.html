@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noodp"/>
+  
+  <link rel="prev" href="https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/" />
+  
+  <link rel="canonical" href="https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/" />
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>
+       
+       
+           리눅스의 스레드 구현 살펴보기 | Life &amp; Projects
+       
+  </title>
+  <meta name="title" content="리눅스의 스레드 구현 살펴보기 | Life &amp; Projects">
+    
+  
+  <link rel="stylesheet" href="/font/iconfont.css">
+  <link rel="stylesheet" href="/css/main.min.css">
+
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="리눅스의 스레드 구현 살펴보기"/>
+<meta name="twitter:description" content="이 포스에서는 &ldquo;리눅스는 모든 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.
+책 &lt;리눅스 커널 심층 분석&gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.
+ The Linux Implementation of Threads &hellip; Linux has a unique implementation of threads. To the Linux kernel, there is no concept of a thread. Linux implements all threads as standard processes. The Linux kernel does not provide any special scheduling semantics or data structures to represent threads."/>
+
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "리눅스의 스레드 구현 살펴보기",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://shoebillk.github.io/cover.png",
+    "width": 800,
+    "height": 600
+  },
+  "genre": "post",
+  
+  "wordcount": 641,
+  "url": "https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/",
+  "datePublished": "2019-03-07T00:00:00+00:00",
+  "dateModified": "2019-03-07T00:00:00+00:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fastbyte01",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://shoebillk.github.io/logo.png",
+      "width": 127,
+      "height": 40
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Fastbyte01"
+  },
+  "description": ""
+}
+</script>
+</head>
+
+  
+
+
+  <body class="">
+    <div class="wrapper">
+        <nav class="navbar">
+    <div class="container">
+        <div class="navbar-header header-logo">
+        	<a href="https://shoebillk.github.io/">Life &amp; Projects</a>
+        </div>
+        <div class="menu navbar-right">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+                <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile" id="nav-mobile" style="display: none">
+     <div class="container">
+        <div class="navbar-header">
+            <div>  <a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-sun"></i></a>&nbsp;<a href="https://shoebillk.github.io/">Life &amp; Projects</a></div>
+            <div class="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+     
+          <div class="menu" id="mobile-menu">
+                
+                
+                <a class="menu-item" href="/post/" title="">Blog</a>
+                
+                <a class="menu-item" href="/categories/" title="">Categories</a>
+                
+                <a class="menu-item" href="/about" title="">About</a>
+                
+        </div>
+    </div>
+</nav>
+    	 <main class="main">
+          <div class="container">
+      		
+<article class="post-warp">
+    <header class="post-header">
+        <h1 class="post-title">리눅스의 스레드 구현 살펴보기</h1>
+        <div class="post-meta">
+              <a href="https://shoebillk.github.io/" rel="author">Byounghoon Kim</a>  ♥ 
+                <span class="post-time">
+                     <time datetime=2019-03-07 >7 March 2019</time>
+                </span>
+                
+                
+                &nbsp;&nbsp;4 min
+        </div>
+    </header>
+    <div class="post-content">
+        
+
+        
+
+        
+        
+     
+          
+          
+          
+
+          
+          
+          
+
+          <p>이 포스에서는 &ldquo;리눅스는 모든 스레드를 일반 프로세스로 구현한다.&rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.</p>
+
+<p>책 &lt;리눅스 커널 심층 분석&gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.</p>
+
+<blockquote>
+<p>The Linux Implementation of Threads
+&hellip;
+Linux has a unique implementation of threads.
+To the Linux kernel, there is no concept of a thread.
+Linux implements all threads as standard processes.
+The Linux kernel does not provide any special scheduling semantics or data structures to represent threads.
+Instead, a thread is merely a process that shares certain resources with other processes.
+Each thread has a unique task_struct and appears to the kernel as a normal process—
+threads just happen to share resources, such as an address space, with other processes.
+This approach to threads contrasts greatly with operating systems such as Microsoft
+Windows or Sun Solaris, which have explicit kernel support for threads (and sometimes
+call threads lightweight processes).The name “lightweight process” sums up the difference in
+philosophies between Linux and other systems.To these other operating systems, threads
+are an abstraction to provide a lighter, quicker execution unit than the heavy process.To
+Linux, threads are simply a manner of sharing resources between processes (which are
+already quite lightweight). For example, assume you have a process that consists of four
+threads. On systems with explicit thread support, one process descriptor might exist that,
+in turn, points to the four different threads.The process descriptor describes the shared
+resources, such as an address space or open files.The threads then describe the resources
+they alone possess. Conversely, in Linux, there are simply four processes and thus four
+normal task_struct structures.The four processes are set up to share certain resources.
+The result is quite elegant
+&hellip;</p>
+</blockquote>
+
+<p>스레드라는 개념을 명시적으로 구현한 윈도우나 솔라리스 등의 운영체제와는 달리
+리눅스에서의 스레드 구현은 단지 프로세스 간에 리소스를 공유 하는 형태로 구현한다고 설명한다.</p>
+
+<p>리눅스에서는 스레드를 생성할 때 스레드 생성과 관련된 명시적인 커널 API(윈도우의 경우 PsCreateSystemThread 와 같은)를
+호출하는 것이 대신 프로세스를 클론하고 클론된 프로세스에서 클론한 프로세스의 리소스를 공유하는 형태로 구현한다.</p>
+
+<p>코드로 알아 보기 위해 아래와 같은 스레드 생성 코드를 작성했다.</p>
+
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;unistd.h&gt;
+#include &lt;pthread.h&gt;
+
+static void* thread(void *arg)
+{
+	printf(&quot;sleeping... 100 seconds...\n&quot;);
+	sleep(100);
+	return 0;
+}
+
+void main() 
+{
+	pthread_t tid;
+	int ret;
+	void *res;
+
+	ret = pthread_create(&amp;tid, NULL, &amp;thread, NULL);
+	printf(&quot;waiting... \n&quot;);
+	ret = pthread_join(tid, &amp;res);
+}
+</code></pre>
+
+<p>위 코드를 컴파일(gcc main.c -lpthread)한 후 strace를 통해 실행하면
+아래와 같이 pthread_create 호출 시 clone API 를 호출하는 것을 확인할 수 있다.
+(좀더 자세한 사항은 man clone(2) 의 CLONE_THREAD 부분을 참고하기 바란다.)</p>
+
+<pre><code class="language-bash">&gt; strace ./a.out
+...
+brk(NULL)                               = 0x55966b82a000
+brk(0x55966b84b000)                     = 0x55966b84b000
+clone(child_stack=0x7f306daeffb0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_
+tidptr=0x7f306daf09d0, tls=0x7f306daf0700, child_tidptr=0x7f306daf09d0) = 2126                                                                                              
+futex(0x7f306dede8c0, FUTEX_WAIT_PRIVATE, 2, NULLsleeping... 100 seconds...
+) = 0
+write(1, &quot;waiting... \n&quot;, 12waiting... 
+...
+</code></pre>
+
+<p>간단하게 나마 리눅스 커널에서는 스레드라는 것이 다른 프로세스의 리소스를 공유하는 프로세스라는 점을 알아 보았다. 그럼 유저 모드에서는 그 영향이 나타날까? thread id 라는 것이 process id 와 동일할 것일까?</p>
+
+<p>위에서 작성한 프로그램을 백그라운드로 실행한다(./a.out &amp;).
+그리고 thread 에 관한 정보를 출력하기 위해 ps 명령에 -Lf 옵션을 주어 실행한다.</p>
+
+<pre><code class="language-bash">&gt; ./a.out &amp;
+[1] 4308
+waiting... 
+sleeping... 100 seconds...
+
+&gt; ps -Lf
+UID        PID  PPID   LWP  C NLWP STIME TTY          TIME CMD
+...
+bhkim     4308  2028  4308  0    2 23:02 pts/4    00:00:00 ./a.out
+bhkim     4308  2028  4310  0    2 23:02 pts/4    00:00:00 ./a.out
+...
+
+</code></pre>
+
+<p>ps의 출력 정보 중 PID 4308 이라는 항목으로 두줄의 정보가 나온다.
+thread id 정도가 있어야 할 자리에 LWP ID가 출력된다.
+첫번째 줄의 LWP 항목은 자신의 PID 와 동일한 값을 가진다.
+그리고 두번째 줄의 LWP 항목은 4310 의 값을 가진다.
+LWP는 light wight process의 약자로 리눅스 커널이 스레드를 프로세스로 구현함으로 인해 나타난 증상이라고 볼 수 있다.</p>
+
+<p>LWP 항목은 실제로 PID 의 대용으로 사용할 수 있다.
+예를 들면, kill 4310 과 같은 명령으로 LWP 4310 인 프로세스를 종료할 수도 있다.</p>
+
+<p>요약,</p>
+
+<ol>
+<li>리눅스 커널은 스레드를 프로세스를 이용해 구현한다.</li>
+<li>LWP 라는 이름은 리눅스의 스레드 구현에 기인한 산물이다.</li>
+<li>리눅스의 커널 구현은 스레드를 명시적으로 구현하는 다른 운영체제와 대조된다.</li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+             
+            <p class="copyright-item">
+                <span>:</span>
+                <span>Byounghoon Kim </span>
+                </p>
+            
+           
+            <p class="copyright-item">
+                    <span>:</span>
+                   <span>641</span>
+            </p>
+
+             
+            <p class="copyright-item lincese">
+                Released under <a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+            </p>
+            
+    </div>
+
+  
+    <div class="post-tags">
+        
+        <section>
+                <a href="javascript:window.history.back();"></a></span> · 
+                <span><a href="https://shoebillk.github.io/"></a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/" class="prev" rel="prev" title="Vi의 Esc 기원"><i class="iconfont icon-dajiantou"></i>&nbsp;Vi의 Esc 기원</a>
+         
+        
+    </div>
+
+    <div class="post-comment">
+          
+                 
+          
+    </div>
+</article>
+          </div>
+		   </main>
+      <footer class="footer">
+    <div class="copyright">
+        &copy;
+        
+         
+            <span class="author" itemprop="copyrightHolder"><a href="https://shoebillk.github.io/">Byounghoon Kim</a> | </span>
+         
+
+		  <span>Crafted with ❤️ by <a href="https://fsb01.com" target="_blank" rel="external nofollow noopener noreffer">Fastbyte01</a> & <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a></span>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    <script src="/js/vendor_no_gallery.min.js" async=""></script>
+    
+  
+
+
+
+
+     </div>
+  </body>
+</html>
