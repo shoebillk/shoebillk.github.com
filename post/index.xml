@@ -28,10 +28,11 @@
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
       <guid>https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
-      <description>Vim을 사용하다 보면 가끔 왜 타이핑이 어려운 Esc키로 모드 전환을 했을까 궁금해 질때가 있습니다.
-Vim에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키에 속합니다. 방향키 대신 hjkl 키로 방향키를 대신할 만큼 단축키 선정에서 효율성을 중시하는 툴이 자주 쓰는 전환 키를 불편한 Esc 로 선정했다는 것은 납득이 되지 않았습니다.
-The Vim Holy Grail를 읽고 조금 이해하게 되었습니다. 요약을 하면.
- Vi가 만들어질 당시에 쓰였던 키보드는 ADM3A 이란 터미널에 딸려 있는 키보드였다.</description>
+      <description>Vi 제작자는 자주 모드 전환키로 왜 Esc 키를 선택 했을까?
+Vi에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키다. 방향키 대신 hjkl 키로 방향키를 대신할 만큼 단축키 선정에서 효율성을 중시하는 에디터가 자주 쓰는 키를 불편한 Esc로 선정했다는 것은 이해되지 않는다.
+The Vim Holy Grail이라는 글에서 힌트를 얻을 수 있다.
+인용 요약 하면 아래와 같다.
+ Vi가 만들어질 당시에 쓰였던 키보드는 ADM3A 이란 터미널에 딸려 있는 키보드였다. 이 키보드의 Esc키 위치는 현대 키보드의 탭키 위치로 자주 타이핑 하기에 적당한 위치였다.</description>
     </item>
     
   </channel>
