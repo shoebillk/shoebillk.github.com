@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Life &amp; Projects on Life &amp; Projects</title>
-    <link>https://shoebillk.github.io/</link>
+    <link>https://byounghoonkim.github.io/</link>
     <description>Recent content in Life &amp; Projects on Life &amp; Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://byounghoonkim.github.io/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
-      <link>https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/</link>
+      <link>https://byounghoonkim.github.io/post/2019-03-07-the_linux_implementation_of_threads/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/</guid>
+      <guid>https://byounghoonkim.github.io/post/2019-03-07-the_linux_implementation_of_threads/</guid>
       <description>&lt;p&gt;&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.&lt;/p&gt;
 
 &lt;p&gt;책 &amp;lt;리눅스 커널 심층 분석&amp;gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.&lt;/p&gt;
@@ -132,10 +131,10 @@ LWP는 light wight process의 약자로 리눅스 커널이 스레드를 프로�
     
     <item>
       <title>Vi의 Esc 기원</title>
-      <link>https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
+      <link>https://byounghoonkim.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
+      <guid>https://byounghoonkim.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
       <description>&lt;p&gt;Vi 제작자는 자주 모드 전환키로 왜 Esc 키를 선택 했을까?&lt;/p&gt;
 
 &lt;p&gt;Vi에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키다.
