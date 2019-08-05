@@ -1,9 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://shoebillk.github.io/post/2019-03-07-the_linux_implementation_of_threads/</loc>
+      <loc>https://byounghoonkim.github.io/categories/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/post/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/tags/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/categories/linux/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/tags/linux/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/tags/linux_kernel/</loc>
+      
+      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
+      
+      
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/post/2019-03-07-the_linux_implementation_of_threads/</loc>
       
       <lastmod>2019-03-07T00:00:00+00:00</lastmod>
       
@@ -17,7 +100,7 @@
     </url>
   
     <url>
-      <loc>https://shoebillk.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</loc>
+      <loc>https://byounghoonkim.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</loc>
       
       <lastmod>2015-02-13T00:00:00+00:00</lastmod>
       
@@ -31,108 +114,22 @@
     </url>
   
     <url>
-      <loc>https://shoebillk.github.io/categories/</loc>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/tags/linux/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/categories/linux/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/tags/linux_kernel/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/post/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/tags/</loc>
-      
-      <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-      
-      
-      <changefreq>monthly</changefreq>
-      
-      
-      <priority>0</priority>
-      
-      
-    </url>
-  
-    <url>
-      <loc>https://shoebillk.github.io/tags/vim/</loc>
+      <loc>https://byounghoonkim.github.io/categories/vim/</loc>
       
       <lastmod>2015-02-13T00:00:00+00:00</lastmod>
       
       
-      <changefreq>monthly</changefreq>
+      
+      <priority>0</priority>
+      
+      
+    </url>
+  
+    <url>
+      <loc>https://byounghoonkim.github.io/tags/vim/</loc>
+      
+      <lastmod>2015-02-13T00:00:00+00:00</lastmod>
+      
       
       
       <priority>0</priority>
@@ -141,15 +138,15 @@
     </url>
   
     <url>
-      <loc>https://shoebillk.github.io/categories/vim/</loc>
+      <loc>https://byounghoonkim.github.io/about/</loc>
       
-      <lastmod>2015-02-13T00:00:00+00:00</lastmod>
+      <lastmod>2014-04-09T00:00:00+00:00</lastmod>
       
       
       <changefreq>monthly</changefreq>
       
       
-      <priority>0</priority>
+      <priority>0.5</priority>
       
       
     </url>
