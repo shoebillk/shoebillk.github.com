@@ -1,40 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Life &amp; Projects</title>
-    <link>https://byounghoonkim.github.io/tags/</link>
-    <description>Recent content in Tags on Life &amp; Projects</description>
+    <title>Tags on BH Kim&#39;s blog</title>
+    <link>https://byounghoohkim.github.io/tags/</link>
+    <description>Recent content in Tags on BH Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>ko-kr</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://byounghoonkim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://byounghoohkim.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>linux</title>
-      <link>https://byounghoonkim.github.io/tags/linux/</link>
+      <link>https://byounghoohkim.github.io/tags/linux/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoonkim.github.io/tags/linux/</guid>
+      <guid>https://byounghoohkim.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux_kernel</title>
-      <link>https://byounghoonkim.github.io/tags/linux_kernel/</link>
+      <link>https://byounghoohkim.github.io/tags/linux_kernel/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoonkim.github.io/tags/linux_kernel/</guid>
+      <guid>https://byounghoohkim.github.io/tags/linux_kernel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vim</title>
-      <link>https://byounghoonkim.github.io/tags/vim/</link>
+      <link>https://byounghoohkim.github.io/tags/vim/</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoonkim.github.io/tags/vim/</guid>
+      <guid>https://byounghoohkim.github.io/tags/vim/</guid>
       <description></description>
     </item>
     

@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>linux on Life &amp; Projects</title>
-    <link>https://byounghoonkim.github.io/tags/linux/</link>
-    <description>Recent content in linux on Life &amp; Projects</description>
+    <title>linux on BH Kim&#39;s blog</title>
+    <link>https://byounghoohkim.github.io/tags/linux/</link>
+    <description>Recent content in linux on BH Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>ko-kr</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://byounghoonkim.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://byounghoohkim.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
-      <link>https://byounghoonkim.github.io/post/2019-03-07-the_linux_implementation_of_threads/</link>
+      <link>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoonkim.github.io/post/2019-03-07-the_linux_implementation_of_threads/</guid>
-      <description>&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다.
-책 &amp;lt;리눅스 커널 심층 분석&amp;gt;의 리눅스 스레드 구현 이라는 장에는 아래와 같은 설명이 나온다.
- The Linux Implementation of Threads &amp;hellip; Linux has a unique implementation of threads. To the Linux kernel, there is no concept of a thread. Linux implements all threads as standard processes. The Linux kernel does not provide any special scheduling semantics or data structures to represent threads.</description>
+      <guid>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</guid>
+      <description>&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다. 책 &amp;l</description>
     </item>
     
   </channel>
