@@ -6,8 +6,77 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>ko-kr</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 25 Oct 2019 22:19:22 +0900</lastBuildDate>
 		<atom:link href="https://byounghoonkim.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Docker로 Golang 프로젝트 빌드 하기</title>
+			<link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link>
+			<pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate>
+			
+			<guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid>
+			<description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description>
+			<content type="html"><![CDATA[
+
+<p>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다.
+또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다.</p>
+
+<p>여러 Golang 버전을 관리하는 방법은 <a href="https://github.com/moovweb/gvm">gvm</a> 도 있지만 여러가지 설정도 해야 하고 필요한 버전들을 설치해야 해서 조금 불편할 수도 있다.</p>
+
+<p>Docker를 이용하면 간단히 프로젝트를 빌드해 볼 수 있다. 그 방법을 간단히 알아 보자.</p>
+
+<h2 id="샘플-프로젝트">샘플 프로젝트</h2>
+
+<p>빌드할 프로젝트 hello라는 프로젝트를 만들고 main.go 파일을 작성한다.</p>
+
+<pre><code>hello
+├── compile.sh
+└── main.go
+</code></pre>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
+<span class="kn">import</span> <span class="s">&#34;fmt&#34;</span>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">)</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="빌드-하기">빌드 하기</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">GOLANG_VERSION</span><span class="o">=</span><span class="s2">&#34;1.13.1&#34;</span>
+
+<span class="nv">GOX_INST_CMD</span><span class="o">=</span><span class="s2">&#34;go get github.com/mitchellh/gox&#34;</span>
+<span class="nv">GOX_BUILD_CMD</span><span class="o">=</span><span class="s2">&#34;gox -output=build/{{.OS}}/{{.Arch}}/{{.Dir}}&#34;</span>
+
+<span class="nv">PROJECT_DIR</span><span class="o">=</span><span class="sb">`</span>basename <span class="s2">&#34;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&#34;</span><span class="sb">`</span>
+
+docker run -it --rm <span class="se">\
+</span><span class="se"></span>	-v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/<span class="nv">$PROJECT_DIR</span> <span class="se">\
+</span><span class="se"></span>	golang:<span class="nv">$GOLANG_VERSION</span> <span class="se">\
+</span><span class="se"></span>	bash -c <span class="s2">&#34;cd /</span><span class="nv">$PROJECT_DIR</span><span class="s2"> &amp;&amp; </span><span class="nv">$GOX_INST_CMD</span><span class="s2"> &amp;&amp; </span><span class="nv">$GOX_BUILD_CMD</span><span class="s2"> &amp;&amp; exit&#34;</span></code></pre></div>
+<p>위 샘플 compile.sh 스크립트는 golang 1.13.1 버전에서 빌드한다.
+여러 플랫폼용으로 잘 빌드 되는지 확인하기 위해 <a href="https://github.com/mitchellh/gox">gox</a>를 사용해 빌드한다.
+빌드된 바이너리는 host 에 남기기 위해 docker run 명령에 volume 파라미터로 프로젝트 폴더를 연결한다.</p>
+
+<h2 id="빌드-결과">빌드 결과</h2>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ file ./build/**/hello
+./build/darwin/386/hello:     Mach-O i386 executable
+./build/darwin/amd64/hello:   Mach-O <span class="m">64</span>-bit x86_64 executable
+./build/freebsd/386/hello:    ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>FreeBSD<span class="o">)</span>, statically linked, not stripped
+./build/freebsd/amd64/hello:  ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>FreeBSD<span class="o">)</span>, statically linked, not stripped
+./build/freebsd/arm/hello:    ELF <span class="m">32</span>-bit LSB executable, ARM, EABI5 version <span class="m">1</span> <span class="o">(</span>FreeBSD<span class="o">)</span>, statically linked, not stripped
+./build/linux/386/hello:      ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/amd64/hello:    ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/arm/hello:      ELF <span class="m">32</span>-bit LSB executable, ARM, EABI5 version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/mips/hello:     ELF <span class="m">32</span>-bit MSB executable, MIPS, MIPS32 version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/mips64/hello:   ELF <span class="m">64</span>-bit MSB executable, MIPS, MIPS-III version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/mips64le/hello: ELF <span class="m">64</span>-bit LSB executable, MIPS, MIPS-III version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/mipsle/hello:   ELF <span class="m">32</span>-bit LSB executable, MIPS, MIPS32 version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/linux/s390x/hello:    ELF <span class="m">64</span>-bit MSB executable, IBM S/390, version <span class="m">1</span> <span class="o">(</span>SYSV<span class="o">)</span>, statically linked, not stripped
+./build/netbsd/386/hello:     ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>NetBSD<span class="o">)</span>, statically linked, <span class="k">for</span> NetBSD <span class="m">5</span>.99, not stripped
+./build/netbsd/amd64/hello:   ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>NetBSD<span class="o">)</span>, statically linked, <span class="k">for</span> NetBSD <span class="m">5</span>.99, not stripped
+./build/netbsd/arm/hello:     ELF <span class="m">32</span>-bit LSB executable, ARM, EABI5 version <span class="m">1</span> <span class="o">(</span>NetBSD<span class="o">)</span>, statically linked, <span class="k">for</span> NetBSD <span class="m">5</span>.99, not stripped
+./build/openbsd/386/hello:    ELF <span class="m">32</span>-bit LSB executable, Intel <span class="m">80386</span>, version <span class="m">1</span> <span class="o">(</span>OpenBSD<span class="o">)</span>, statically linked, <span class="k">for</span> OpenBSD, not stripped
+./build/openbsd/amd64/hello:  ELF <span class="m">64</span>-bit LSB executable, x86-64, version <span class="m">1</span> <span class="o">(</span>OpenBSD<span class="o">)</span>, statically linked, <span class="k">for</span> OpenBSD, not stripped</code></pre></div>
+<p>Docker 이미지를 이용하면 비교적 시스템에 영향을 미치지 않고 여러 버전의 golang 에서 기존 프로젝트의 빌드를 테스트 해 볼 수 있다.</p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>

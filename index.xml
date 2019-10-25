@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 22:19:22 +0900</lastBuildDate>
     
 	<atom:link href="https://byounghoonkim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Docker로 Golang 프로젝트 빌드 하기</title>
+      <link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link>
+      <pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate>
+      
+      <guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid>
+      <description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description>
+    </item>
     
     <item>
       <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
