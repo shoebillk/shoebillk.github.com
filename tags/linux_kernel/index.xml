@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>linux_kernel on BH Kim&#39;s blog</title>
-    <link>https://byounghoohkim.github.io/tags/linux_kernel/</link>
+    <link>https://byounghoonkim.github.io/tags/linux_kernel/</link>
     <description>Recent content in linux_kernel on BH Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://byounghoohkim.github.io/tags/linux_kernel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://byounghoonkim.github.io/tags/linux_kernel/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
-      <link>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</link>
+      <link>https://byounghoonkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</guid>
+      <guid>https://byounghoonkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</guid>
       <description>&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다. 책 &amp;l</description>
     </item>
     

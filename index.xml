@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>BH Kim&#39;s blog</title>
-    <link>https://byounghoohkim.github.io/</link>
+    <link>https://byounghoonkim.github.io/</link>
     <description>Recent content on BH Kim&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Thu, 07 Mar 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://byounghoohkim.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://byounghoonkim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>리눅스의 스레드 구현 살펴보기 - 리눅스는 스레드를 일반 프로세스로 구현한다</title>
-      <link>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</link>
+      <link>https://byounghoonkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</link>
       <pubDate>Thu, 07 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoohkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</guid>
+      <guid>https://byounghoonkim.github.io/posts/2019-03-07-the_linux_implementation_of_threads/</guid>
       <description>&amp;ldquo;리눅스는 스레드를 일반 프로세스로 구현한다.&amp;rdquo; 라는 문구의 의미에 대해 좀더 깊이 살펴보고 어떤 의미를 가지는지 확인해 본다. 책 &amp;l</description>
     </item>
     
     <item>
       <title>Vi의 Esc 기원</title>
-      <link>https://byounghoohkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
+      <link>https://byounghoonkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoohkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
+      <guid>https://byounghoonkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
       <description>Vi 제작자는 자주 모드 전환키로 왜 Esc 키를 선택 했을까? Vi에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키다. 방향키 대신 hjkl 키로 방향키</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://byounghoohkim.github.io/about/</link>
+      <link>https://byounghoonkim.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoohkim.github.io/about/</guid>
+      <guid>https://byounghoonkim.github.io/about/</guid>
       <description>김병훈 (Byounghoon Kim) GitHub | Linkedin | Email 개발자 (현) 안랩(AhnLab, Inc.) Windows Kernel Network Filter Driver macOS Kext Network Packet Filter C, C++, Ruby, Rails, GoLang Firewall, IPS, Anti-Pharming V3 365/Lite팀, 기반기술팀</description>
     </item>
     
