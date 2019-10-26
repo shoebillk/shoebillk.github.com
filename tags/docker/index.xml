@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on BH Kim&#39;s blog</title>
+    <link>https://byounghoonkim.github.io/tags/docker/</link>
+    <description>Recent content in docker on BH Kim&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 25 Oct 2019 22:19:22 +0900</lastBuildDate>
+    
+	<atom:link href="https://byounghoonkim.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Docker로 Golang 프로젝트 빌드 하기</title>
+      <link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link>
+      <pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate>
+      
+      <guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid>
+      <description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,12 +8,27 @@
   </url>
   
   <url>
+    <loc>https://byounghoonkim.github.io/tags/docker/</loc>
+    <lastmod>2019-10-25T22:19:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byounghoonkim.github.io/posts/building_golang_using_docker/</loc>
     <lastmod>2019-10-25T22:19:22+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://byounghoonkim.github.io/tags/golang/</loc>
+    <lastmod>2019-10-25T22:19:22+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://byounghoonkim.github.io/posts/</loc>
+    <lastmod>2019-10-25T22:19:22+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://byounghoonkim.github.io/tags/</loc>
     <lastmod>2019-10-25T22:19:22+09:00</lastmod>
   </url>
   
@@ -24,11 +39,6 @@
   
   <url>
     <loc>https://byounghoonkim.github.io/tags/linux_kernel/</loc>
-    <lastmod>2019-03-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://byounghoonkim.github.io/tags/</loc>
     <lastmod>2019-03-07T00:00:00+00:00</lastmod>
   </url>
   
