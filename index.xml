@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 25 Oct 2019 22:19:22 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://byounghoonkim.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>https://byounghoonkim.github.io/about/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://byounghoonkim.github.io/about/</guid>
+      <description>김병훈 (Byounghoon Kim) GitHub | Linkedin | Email (현)네이버 클로바(Naver Clova) AI Product, Platform 개발 Golang, Python 오늘의집(버킷플레이스) 백엔드 개발자 Rails 안랩 AhnLab 개발자 Windows Kernel Network Filter Driver macOS Kext Network Packet Filter C, C++,</description>
+    </item>
     
     <item>
       <title>Docker로 Golang 프로젝트 빌드 하기</title>
@@ -37,15 +46,6 @@
       
       <guid>https://byounghoonkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
       <description>Vi 제작자는 자주 모드 전환키로 왜 Esc 키를 선택 했을까? Vi에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키다. 방향키 대신 hjkl 키로 방향키</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://byounghoonkim.github.io/about/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://byounghoonkim.github.io/about/</guid>
-      <description>김병훈 (Byounghoon Kim) GitHub | Linkedin | Email 개발자 (현) 안랩(AhnLab, Inc.) Windows Kernel Network Filter Driver macOS Kext Network Packet Filter C, C++, Ruby, Rails, GoLang Firewall, IPS, Anti-Pharming V3 365/Lite팀, 기반기술팀</description>
     </item>
     
   </channel>
