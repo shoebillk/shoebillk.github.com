@@ -14,10 +14,10 @@
     
     <item>
       <title>Vi의 Esc 기원</title>
-      <link>https://byounghoonkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
+      <link>https://byounghoonkim.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</link>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://byounghoonkim.github.io/posts/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
+      <guid>https://byounghoonkim.github.io/post/2015-02-13-vim-holy-grail-esc-ctrl-bracke-and-jk/</guid>
       <description>Vi 제작자는 자주 모드 전환키로 왜 Esc 키를 선택 했을까? Vi에서 Esc키는 삽입 모드에서 명령 모드로 전환하는 키로 아주 자주 쓰이는 키다. 방향키 대신 hjkl 키로 방향키</description>
     </item>
     

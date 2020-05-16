@@ -14,10 +14,10 @@
     
     <item>
       <title>Docker로 Golang 프로젝트 빌드 하기</title>
-      <link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link>
+      <link>https://byounghoonkim.github.io/post/building_golang_using_docker/</link>
       <pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate>
       
-      <guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid>
+      <guid>https://byounghoonkim.github.io/post/building_golang_using_docker/</guid>
       <description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description>
     </item>
     
