@@ -14,22 +14,23 @@
 (참고 - <a href="https://github.com/daipeihust/im-select">https://github.com/daipeihust/im-select</a>)</p>
 <pre><code>curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 The im-select program will be downloaded to your /usr/local/bin/ path.
-</code></pre><p>위 명령을 실행 하면 /usr/local/bin 경로 아래 im-select 라는 실행 파일이 설치된다.</p>
+</code></pre><p>위 명령을 실행하면 /usr/local/bin 경로 아래 im-select 라는 실행 파일이 설치된다.</p>
 <h2 id="brglngvim-im-select-플러그인-설치">brglng/vim-im-select 플러그인 설치</h2>
-<p>&lsquo;brglng/vim-im-select&rsquo; 라는 Vim 플러그인을 설치한다.
+<p>&lsquo;brglng/vim-im-select&rsquo;라는 Vim 플러그인을 설치한다.
 (참고 - <a href="https://github.com/brglng/vim-im-select">https://github.com/brglng/vim-im-select</a>)
-(vim-plug를 통해 플러그인을 설치했다. 플러그인을 설치하는 방법을 모른다면 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> 페이지를 참고한다.)</p>
+(vim-plug를 통해 플러그인을 설치했다. 플러그인을 설치하는 방법은 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> 페이지를 참고한다.)</p>
 <pre><code>call plug#begin('~/.vim/plugged')
     Plug 'brglng/vim-im-select'
 call plug#end()
-</code></pre><p>설치를 완료하면 아래와 같이 입력 모드에서 한글로 입력 중에 Esc 키를 한번 눌러 노말 모드로 진입시 영문 입력으로 변경되어
+</code></pre><p>설치를 완료하면 아래와 같이 한글 입력이 가능한 입력 모드에서
+Esc 키를 한번 누르면 영문으로 입력 언어가 변경되면서 노말 모드로 진입하게 되어
 추가적인 IME 전환이 필요 없어진다.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://player.vimeo.com/video/421942102" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  </div>
 
-<p>이 방법의 모드 전환 시 마다 im-select 프로세스를 실행하기 때문에 저사양 환경에서 입력 전환이 조금 느려지거나 지연되는 단점이 있다.
+<p>이 방법의 모드 전환 시 마다 im-select 프로세스를 실행하기 때문에 저사양 환경에서 입력 전환이 조금 지연되는 단점이 있다.
 하지만 설정이 비교적 쉽고 사양만 따라 준다면 기대한 대로 잘 동작한다.</p>
 ]]></content></item><item><title>Docker로 Golang 프로젝트 빌드 하기</title><link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link><pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid><description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description><content type="html"><![CDATA[<p>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다.
 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다.</p>
