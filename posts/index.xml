@@ -1,4 +1,37 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on BH Kim's blog</title><link>https://byounghoonkim.github.io/posts/</link><description>Recent content in Posts on BH Kim's blog</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Oct 2019 22:19:22 +0900</lastBuildDate><atom:link href="https://byounghoonkim.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker로 Golang 프로젝트 빌드 하기</title><link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link><pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid><description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description><content type="html"><![CDATA[<p>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on BH Kim's blog</title><link>https://byounghoonkim.github.io/posts/</link><description>Recent content in Posts on BH Kim's blog</description><generator>Hugo -- gohugo.io</generator><language>ko-kr</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2020 22:06:31 +0900</lastBuildDate><atom:link href="https://byounghoonkim.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Vim 입력모드 노말모드 전환시 한글 영어 자동 전환하기</title><link>https://byounghoonkim.github.io/posts/vim-kor-eng-auto-switch/</link><pubDate>Sat, 23 May 2020 22:06:31 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/vim-kor-eng-auto-switch/</guid><description>Vim을 사용하다 보면 한글 입력 중에 Esc로 노말 모드 진입할 때 다시 영문으로 바꿔줘야 하는 불편함이 있다. 이 문제를 해결해 보려고 여러 사람들이 여러 방법을 시도</description><content type="html"><![CDATA[<p>Vim을 사용하다 보면 한글 입력 중에 Esc로 노말 모드 진입할 때 다시 영문으로 바꿔줘야 하는 불편함이 있다.</p>
+<p>이 문제를 해결해 보려고 여러 사람들이 여러 방법을 시도 했고 그 흔적들은 아래 블로그 글들에서 볼 수 있다.</p>
+<ul>
+<li><a href="http://seorenn.blogspot.com/2011/04/vim-vim-esc.html">Vim Vim에서 ESC를 눌렀을 때 영문 상태로 전환하기 - Seorenn SIGSEGV</a></li>
+<li><a href="https://johngrib.github.io/blog/2017/05/04/input-source/">Vim 사용시 한/영 전환 문제 해결하기 - 기계인간 John Grib</a></li>
+<li><a href="https://coldmater.tistory.com/177">VIMOS X한글 입력 상태에서 노멀모드 복귀 후 영어 입력소스로 전환하기 (feat. hammerspoon, autohotkey)</a></li>
+</ul>
+<p>위 블로그들에서 소개된 방법과 별개로 im-select 라는 툴을 이용하는 방법을 소개한다.
+이 방법을 소개하는 이유는 내게 가장 잘 맞았고 기대한 대로 잘 동작하며 Visual Studio Code 의 Vim Mode에서도 비슷한 방법을 적용할 수 있기 때문이다!</p>
+<p>아래 설명은 macOS 환경 기준이다.
+(다른 환경은 시도해 보지 않았다.)</p>
+<h2 id="im-select-설치하기">im-select 설치하기</h2>
+<p>아래 명령으로  im-select라는 툴을 설치한다.
+(참고 - <a href="https://github.com/daipeihust/im-select">https://github.com/daipeihust/im-select</a>)</p>
+<pre><code>curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
+The im-select program will be downloaded to your /usr/local/bin/ path.
+</code></pre><p>위 명령을 실행 하면 /usr/local/bin 경로 아래 im-select 라는 실행 파일이 설치된다.</p>
+<h2 id="brglngvim-im-select-플러그인-설치">brglng/vim-im-select 플러그인 설치</h2>
+<p>&lsquo;brglng/vim-im-select&rsquo; 라는 Vim 플러그인을 설치한다.
+(참고 - <a href="https://github.com/brglng/vim-im-select">https://github.com/brglng/vim-im-select</a>)
+(vim-plug를 통해 플러그인을 설치했다. 플러그인을 설치하는 방법을 모른다면 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> 페이지를 참고한다.)</p>
+<pre><code>call plug#begin('~/.vim/plugged')
+    Plug 'brglng/vim-im-select'
+call plug#end()
+</code></pre><p>설치를 완료하면 아래와 같이 입력 모드에서 한글로 입력 중에 Esc 키를 한번 눌러 노말 모드로 진입시 영문 입력으로 변경되어
+추가적인 IME 전환이 필요 없어진다.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://player.vimeo.com/video/421942102" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+ </div>
+
+<p>이 방법의 모드 전환 시 마다 im-select 프로세스를 실행하기 때문에 저사양 환경에서 입력 전환이 조금 느려지거나 지연되는 단점이 있다.
+하지만 설정이 비교적 쉽고 사양만 따라 준다면 기대한 대로 잘 동작한다.</p>
+]]></content></item><item><title>Docker로 Golang 프로젝트 빌드 하기</title><link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link><pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid><description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description><content type="html"><![CDATA[<p>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다.
 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다.</p>
 <p>여러 Golang 버전을 관리하는 방법은 <a href="https://github.com/moovweb/gvm">gvm</a> 도 있지만 여러가지 설정도 해야 하고 필요한 버전들을 설치해야 해서 조금 불편할 수도 있다.</p>
 <p>Docker를 이용하면 간단히 프로젝트를 빌드해 볼 수 있다. 그 방법을 간단히 알아 보자.</p>
