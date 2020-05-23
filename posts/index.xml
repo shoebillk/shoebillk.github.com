@@ -7,18 +7,18 @@
 </ul>
 <p>위 블로그들에서 소개된 방법과 별개로 im-select 라는 툴을 이용하는 방법을 소개한다.
 이 방법을 소개하는 이유는 내게 가장 잘 맞았고 기대한 대로 잘 동작하며 Visual Studio Code 의 Vim Mode에서도 비슷한 방법을 적용할 수 있기 때문이다!</p>
-<p>아래 설명은 macOS 환경 기준이다.
-(다른 환경은 시도해 보지 않았다.)</p>
+<p>아래 설명은 macOS 환경 기준이다.</p>
+<p>(다른 환경은 시도해 보지 않았다.)</p>
 <h2 id="im-select-설치하기">im-select 설치하기</h2>
-<p>아래 명령으로  im-select라는 툴을 설치한다.
-(참고 - <a href="https://github.com/daipeihust/im-select">https://github.com/daipeihust/im-select</a>)</p>
+<p>아래 명령으로  im-select라는 툴을 설치한다.</p>
+<p>(참고 - <a href="https://github.com/daipeihust/im-select">https://github.com/daipeihust/im-select</a>)</p>
 <pre><code>curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
 The im-select program will be downloaded to your /usr/local/bin/ path.
 </code></pre><p>위 명령을 실행하면 /usr/local/bin 경로 아래 im-select 라는 실행 파일이 설치된다.</p>
 <h2 id="brglngvim-im-select-플러그인-설치">brglng/vim-im-select 플러그인 설치</h2>
-<p>&lsquo;brglng/vim-im-select&rsquo;라는 Vim 플러그인을 설치한다.
-(참고 - <a href="https://github.com/brglng/vim-im-select">https://github.com/brglng/vim-im-select</a>)
-(vim-plug를 통해 플러그인을 설치했다. 플러그인을 설치하는 방법은 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> 페이지를 참고한다.)</p>
+<p>&lsquo;brglng/vim-im-select&rsquo;라는 Vim 플러그인을 설치한다.</p>
+<p>(참고 - <a href="https://github.com/brglng/vim-im-select">https://github.com/brglng/vim-im-select</a>)</p>
+<p>(vim-plug를 통해 플러그인을 설치했다. 플러그인을 설치하는 방법은 <a href="https://github.com/junegunn/vim-plug">vim-plug</a> 페이지를 참고한다.)</p>
 <pre><code>call plug#begin('~/.vim/plugged')
     Plug 'brglng/vim-im-select'
 call plug#end()
@@ -30,8 +30,8 @@ Esc 키를 한번 누르면 영문으로 입력 언어가 변경되면서 노말
   <iframe src="https://player.vimeo.com/video/421942102" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
  </div>
 
-<p>이 방법의 모드 전환 시 마다 im-select 프로세스를 실행하기 때문에 저사양 환경에서 입력 전환이 조금 지연되는 단점이 있다.
-하지만 설정이 비교적 쉽고 사양만 따라 준다면 기대한 대로 잘 동작한다.</p>
+<p>이 방법의 모드 전환 시 마다 im-select 프로세스를 실행하기 때문에 저사양 환경에서 입력 전환이 조금 지연되는 단점이 있다.</p>
+<p>하지만 설정이 비교적 쉽고 사양만 따라 준다면 기대한 대로 잘 동작한다.</p>
 ]]></content></item><item><title>Docker로 Golang 프로젝트 빌드 하기</title><link>https://byounghoonkim.github.io/posts/building_golang_using_docker/</link><pubDate>Fri, 25 Oct 2019 22:19:22 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/building_golang_using_docker/</guid><description>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다. 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다. 여러 Golang 버전을</description><content type="html"><![CDATA[<p>새로운 Golang 버전이 나오면 내 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때가 있다.
 또 다른 버전에서 프로젝트가 잘 빌드 되는지 확인해 보고 싶을 때도 있다.</p>
 <p>여러 Golang 버전을 관리하는 방법은 <a href="https://github.com/moovweb/gvm">gvm</a> 도 있지만 여러가지 설정도 해야 하고 필요한 버전들을 설치해야 해서 조금 불편할 수도 있다.</p>
