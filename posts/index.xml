@@ -13,7 +13,6 @@
 <p>아래 명령으로  im-select라는 툴을 설치한다.</p>
 <p>(참고 - <a href="https://github.com/daipeihust/im-select">https://github.com/daipeihust/im-select</a>)</p>
 <pre><code>curl -Ls https://raw.githubusercontent.com/daipeihust/im-select/master/install_mac.sh | sh
-The im-select program will be downloaded to your /usr/local/bin/ path.
 </code></pre><p>위 명령을 실행하면 /usr/local/bin 경로 아래 im-select 라는 실행 파일이 설치된다.</p>
 <h2 id="brglngvim-im-select-플러그인-설치">brglng/vim-im-select 플러그인 설치</h2>
 <p>&lsquo;brglng/vim-im-select&rsquo;라는 Vim 플러그인을 설치한다.</p>
