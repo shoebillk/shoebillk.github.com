@@ -303,6 +303,7 @@ Go 도구(go tool)는 <code>$GOPATH/src/github.com/user/hello</code> 디렉토�
 <li><a href="https://golang.org/doc/code.html">How to Write Go Code</a></li>
 <li><a href="https://blog.golang.org/organizing-go-code">Organizing Go Code (2012 blog post)</a></li>
 <li><a href="https://talks.golang.org/2014/organizeio.slide">Organizing Go Code (2014 Google I/O talk)</a></li>
+<li><a href="https://blog.billo.io/devposts/golang_naming_convention/">Golang 에서의 명명 규칙</a></li>
 </ul>
 ]]></content></item><item><title>Vim 입력모드 노말모드 전환시 한/영 자동 전환하기</title><link>https://byounghoonkim.github.io/posts/vim-kor-eng-auto-switch/</link><pubDate>Sat, 23 May 2020 22:06:31 +0900</pubDate><guid>https://byounghoonkim.github.io/posts/vim-kor-eng-auto-switch/</guid><description>Vim에서 한글 입력 중에 Esc로 노말 모드 진입할 때 다시 영문으로 바꿔줘야 하는 불편함이 있다. 이 문제를 해결해 보려고 여러 사람들이 여러 방법을 시도 했고 그 흔적</description><content type="html"><![CDATA[<p>Vim에서 한글 입력 중에 Esc로 노말 모드 진입할 때 다시 영문으로 바꿔줘야 하는 불편함이 있다.</p>
 <p>이 문제를 해결해 보려고 여러 사람들이 여러 방법을 시도 했고 그 흔적들은 아래 블로그 글들에서 볼 수 있다.</p>
